@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+    <meta name="description" content="Reusable Button and Card components built with React functional components and props" />
+    <meta name="theme-color" content="#667eea" />
+    <title>Reusable Components - Button & Card</title>
+    <style>
+      /* Prevent FOUC (Flash of Unstyled Content) */
+      #root {
+        min-height: 100vh;
+      }
+      /* Loading fallback */
+      body:not(.loaded) #root::before {
+        content: 'Loading...';
+        display: block;
+        text-align: center;
+        padding: 50px;
+        font-size: 18px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>
+      <div style="padding: 20px; text-align: center; background: #fff3cd; color: #856404; border: 1px solid #ffeaa7;">
+        <h2>JavaScript Required</h2>
+        <p>This application requires JavaScript to run. Please enable JavaScript in your browser settings.</p>
+      </div>
+    </noscript>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+      // Mark body as loaded to remove loading message
+      document.addEventListener('DOMContentLoaded', function() {
+        document.body.classList.add('loaded');
+      });
+    </script>
+  </body>
+</html>
